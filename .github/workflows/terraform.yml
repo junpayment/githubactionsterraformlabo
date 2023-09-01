@@ -47,6 +47,10 @@ jobs:
     needs:
       - plan
       - fmt
+    steps:
+      - name: 'Trigger Apply'
+        run: |
+          echo 'Trigger Apply' 
 
   apply:
     name: Apply
