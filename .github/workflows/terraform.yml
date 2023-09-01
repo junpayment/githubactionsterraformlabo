@@ -53,6 +53,7 @@ jobs:
     environment: production
     needs:
       - plan
+      - fmt
     steps:
       - name: Checkout
         uses: actions/checkout@v3
