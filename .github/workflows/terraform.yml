@@ -74,9 +74,13 @@ jobs:
     needs:
       - apply
     env:
-      PR_URL: ${{github.event.pull_request.html_url}}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PR_URL: ${{ github.event.pull_request.html_url }}
+      GITHUB_TOKEN: ${{ secrets.TF_GITHUB_TOKEN }}
     steps:
+      - name: Output
+        run: |
+          echo $PR_URL
+          echo $GITHUB_TOKEN
       - name: Approve PR
         run: gh pr review "$PR_URL" --approve
       - name: Enable auto-merge for Steward PRs
