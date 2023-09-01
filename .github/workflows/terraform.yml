@@ -41,7 +41,7 @@ jobs:
         run: terraform plan -input=false
 
   trigger-apply:
-    name: Apply
+    name: 'Trigger Apply'
     runs-on: ubuntu-latest
     environment: production
     needs:
