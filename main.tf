@@ -14,8 +14,3 @@ resource "null_resource" "thisisnull" {
   }
 }
 
-resource "null_resource" "thisisnull2" {
-  provisioner "local-exec" {
-    command = "echo ${terraform.workspace}_2"
-  }
-}
