@@ -143,3 +143,4 @@ terraform.rc
 
 githubactionsterraformlabo.iml
 .idea
+.terraform.lock.hcl
